@@ -105,7 +105,7 @@ class WMD_widget(object):
         self.description = "\n".join(["This tool converts wmd or wmdf weaving files from the 'Weavemaker' software to the wif file format.",
                                       "It has been tested on version 8.6.1. It should work for earlier versions.",
                                       "If the converter does not work or produces incorrect/missing output:",
-                                      " - please raise an issue at: github:foo.bar. Include the wmd file if possible." ])
+                                      " - please raise an issue at: https://github.com/Neon22/weavemaker-to-wif. Include the wmd file if possible." ])
         self.privacy = "\n".join(["Privacy note:", " - This webpage and its program are entirely standalone.",
                                   " - No data is sent to a server and the wmd files never leave your machine.",
                                   " - All processing occurs entirely within this webpage."])
