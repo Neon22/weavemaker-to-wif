@@ -1,0 +1,9 @@
+packages = [ "pyscript-ltk>=0.1.2",]
+name = "Weavemaker File Converter"
+
+[files]
+"https://raw.githubusercontent.com/laffra/ltk/main/ltk/ltk.js" = "ltk/ltk.js"
+"https://raw.githubusercontent.com/laffra/ltk/main/ltk/ltk.css" = "ltk/ltk.css"
+
+[[fetch]]
+files = ["./weavemaker.py"]

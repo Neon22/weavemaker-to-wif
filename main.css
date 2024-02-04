@@ -1,0 +1,62 @@
+@import url(https://fonts.googleapis.com/css?family=Pathway+Gothic+One);
+
+* {
+	box-sizing: border-box;
+}
+.title {
+    font-family: Roboto;
+    font-size: 24pt;
+    padding: 15px;
+}
+.textbox {
+    height: 6rem;
+    font-family: Roboto;
+    font-size: 10pt;
+    padding: 10px;
+    margin: 2px;
+}
+.sidebyside {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+.report {
+    height: 10rem;
+    font-family: Roboto;
+    font-size: 10pt;
+    flex-grow: 1;
+}
+.stepBox {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: left;
+    font-family: Roboto;
+    font-size: 16pt;
+    padding: 8px;
+    border: 0.5px solid black;
+}
+.count {
+    font-family: Roboto;
+    font-size: 16pt;
+    margin: 0 0.5rem 0 0;
+    //border: 0.5px dashed red;
+}
+.label {
+    font-family: Roboto;
+    font-size: 10pt;
+}
+.cway_count {
+    font-family: Roboto;
+    font-size: 16pt;
+    margin: 0 0.5rem 0 2rem;
+}
+.cway_color {
+    background-color: #60CFFF;
+}
+.vcenter {
+    align-self: center;
+}
+.ltk-select {
+    background-color: #60CFFF;
+}
