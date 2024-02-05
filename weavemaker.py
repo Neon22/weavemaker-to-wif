@@ -345,6 +345,8 @@ class WMDF(object):
                 new_palette.append([i,palette_dict[i]])
             else: # insert one from palette
                 new_palette.append([i,self.colors[i][0]])
+        #! also wrong
+        new_palette.append([len(self.colors),[0,0,0]])
         #print(new_palette)
         return new_palette #warp_palette
 
