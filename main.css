@@ -1,17 +1,23 @@
 @import url(https://fonts.googleapis.com/css?family=Pathway+Gothic+One);
 
-* {
-	box-sizing: border-box;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+.mytext {
+    font-family: Roboto;
+    font-size: 12pt;
 }
 .title {
-    font-family: Roboto;
+    //font-family: Roboto;
     font-size: 24pt;
     padding: 15px;
 }
 .textbox {
-    height: 6rem;
-    font-family: Roboto;
-    font-size: 10pt;
+    height: 7rem;
+    //font-family: Roboto;
+    //font-size: 12pt;
     padding: 10px;
     margin: 2px;
 }
@@ -22,8 +28,8 @@
 }
 .report {
     height: 10rem;
-    font-family: Roboto;
-    font-size: 10pt;
+    //font-family: Roboto;
+    font-size: 16pt;
     flex-grow: 1;
 }
 .stepBox {
@@ -31,23 +37,23 @@
     flex-direction: column;
     justify-items: center;
     align-items: left;
-    font-family: Roboto;
+    //font-family: Roboto;
     font-size: 16pt;
     padding: 8px;
     border: 0.5px solid black;
 }
 .count {
-    font-family: Roboto;
+    //font-family: Roboto;
     font-size: 16pt;
     margin: 0 0.5rem 0 0;
     //border: 0.5px dashed red;
 }
 .label {
-    font-family: Roboto;
-    font-size: 10pt;
+    //font-family: Roboto;
+    //font-size: 12pt;
 }
 .cway_count {
-    font-family: Roboto;
+    //font-family: Roboto;
     font-size: 16pt;
     margin: 0 0.5rem 0 2rem;
 }

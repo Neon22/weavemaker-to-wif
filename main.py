@@ -7,7 +7,7 @@ from js import Uint8Array, URL, File
 
 #ltk.window.document.currentScript.terminal.resize(60, 12)
 
-# Allow user to upload a wmd/wmdf file from Weavemaker
+# Allow user to upload a wmd/wmdf file from WeaveMaker
 # - Show the colorwyas found and other info,
 # - quietly convert the file into a wif representation,
 # - allow user to download the wif as a file.
@@ -102,42 +102,40 @@ class WMD_widget(object):
     Top level object that manages loading/converting.
     """
     def __init__(self):
-        self.description = "\n".join(["This tool converts wmd or wmdf weaving files from the 'Weavemaker' software to the wif file format.",
-                                      "It has been tested on version 8.6.1. It should work for earlier versions.",
-                                      "If the converter does not work or produces incorrect/missing output:",
+        self.description = "\n".join(["This tool converts wmd or wmdf weaving files from the 'WeaveMaker' software to the wif file format.",
+                                      "It has been tested on version 8.6.1. It should work for earlier versions. If the converter does not work or produces incorrect/missing output:",
                                       " - please raise an issue at: https://github.com/Neon22/weavemaker-to-wif. Include the wmd file if possible." ])
-        self.privacy = "\n".join(["Privacy note:", " - This webpage and its program are entirely standalone.",
-                                  " - No data is sent to a server and the wmd files never leave your machine.",
-                                  " - All processing occurs entirely within this webpage."])
+        self.privacy = "\n".join(["Privacy note:", " - This webpage and its program are entirely standalone. All processing occurs entirely within this webpage.  No data is sent to a server and the wmd files never leave your machine.",
+                                  "I'd like to acknowledge the invaluable help of Dana Cartwright, one of the original WeaveMaker authors, for his help in making this possible."])
 
     def choose_colorway(self, index, option):
         pass
     
     def create(self):
         self.report_text = "Report:"
-        self.RHS_report = ltk.TextArea(self.report_text).addClass("report")
-        self.colorway_count = ltk.Text("0").addClass("cway_count vcenter cway_color")
+        self.RHS_report = ltk.TextArea(self.report_text).addClass("report mytext")
+        self.colorway_count = ltk.Text("0").addClass("cway_count vcenter cway_color  mytext")
         self.colorways = ["0"]  # Hold the possible colorways values
-        getfile_widget = ltk.File().attr("accept",".wmd, .wmdf").addClass("vcenter").on("input", ltk.proxy(lambda event: upload_file(event, self)))
-        download_widget = ltk.Button("Download wif file", ltk.proxy(lambda event: download_file(event, self))).addClass("vcenter")
-        self.colorway_chooser = ltk.Select(self.colorways, 0, self.choose_colorway).addClass("vcenter cway_color").attr("id","cway_chooser")
+        getfile_widget = ltk.File().attr("accept",".wmd, .wmdf").addClass("vcenter mytext").on("input", ltk.proxy(lambda event: upload_file(event, self)))
+        download_widget = ltk.Button("Download wif file", ltk.proxy(lambda event: download_file(event, self))).addClass("vcenter mytext")
+        self.colorway_chooser = ltk.Select(self.colorways, 0, self.choose_colorway).addClass("vcenter  mytext cway_color").attr("id","cway_chooser")
         #
         LHS_controls = ltk.VBox(
-                            ltk.HBox(ltk.Label("1.").addClass("count"),
+                            ltk.HBox(ltk.Label("1.").addClass("count mytext"),
                                      getfile_widget),
                             ltk.HBox(self.colorway_count,
-                                     ltk.Label("Colorways found.").addClass("label vcenter")),
+                                     ltk.Label("Colorways found.").addClass("label  mytext vcenter")),
                             ltk.HBox(ltk.Label("2.").addClass("count"),
-                                     ltk.Label("Choose a colorway:").addClass("label vcenter"),
+                                     ltk.Label("Choose a colorway:").addClass("label vcenter mytext"),
                                      self.colorway_chooser),
-                            ltk.HBox(ltk.Label("3.").addClass("count"),
+                            ltk.HBox(ltk.Label("3.").addClass("count mytext"),
                                      download_widget)
-                        ).addClass("stepBox")
+                        ).addClass("stepBox mytext")
         return (
-            ltk.VBox(ltk.Text("Weavemaker to WIF file converter").addClass("title"),
-                     ltk.TextArea(self.description).addClass("textbox"),
-                     ltk.TextArea(self.privacy).addClass("textbox"),
-                     ltk.HBox(LHS_controls, self.RHS_report).addClass("sidebyside")
+            ltk.VBox(ltk.Text("WeaveMaker to WIF file converter").addClass("title mytext"),
+                     ltk.TextArea(self.description).addClass("textbox mytext"),
+                     ltk.TextArea(self.privacy).addClass("textbox mytext"),
+                     ltk.HBox(LHS_controls, self.RHS_report).addClass("sidebyside mytext")
                     ))
                      
 
